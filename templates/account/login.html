@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-2xl font-bold">Log In</h2>
+<form method="post" class="mt-4 space-y-4">
+  {% csrf_token %}
+  <div>
+    <label for="id_login" class="block text-gray-700">Email</label>
+    <input type="email" name="login" id="id_login" class="w-full border p-2 rounded" placeholder="Email" required>
+  </div>
+  <div>
+    <label for="id_password" class="block text-gray-700">Password</label>
+    <input type="password" name="password" id="id_password" class="w-full border p-2 rounded" required>
+  </div>
+  {% if form.errors %}
+  <div class="text-red-500">{{ form.errors }}</div>
+  {% endif %}
+  <button type="submit" class="bg-blue-500 text-white p-2 rounded">Log In</button>
+</form>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+<h1 class="text-3xl font-bold text-gray-800">Welcome to Launchpad</h1>
+<p class="mt-4 text-gray-600">Your Django starter is ready to roll!</p>
+{% if user.is_authenticated %}
+<div class="mt-6" x-data="{message : ''}">
+  <form hx-post="/echo/" hx-target="#response" hx-swap="innerHTML">
+    {% csrf_token %}
+    <input
+      name="message"
+      type="text"
+      x-model="message"
+      class="border p-2 rounded"
+      placeholder="Say something..."
+    />
+    <button type="submit" class="ml-2 bg-blue-500 text-white p-2 rounded">
+      Send
+    </button>
+  </form>
+</div>
+<div id="response" class="mt-4 text-gray-700"></div>
+{% else %}
+<p class="mt-4">Log in to get started.</p>
+{% endif %} {% endblock %}
