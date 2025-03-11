@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-h$sdk4$b)=@!yuenm762=6$fb6#&nq+v086pru77u5$gw@%u^t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -56,7 +56,6 @@ ACCOUNT_AUTHENTICAION_METHOD = 'email'
 ACCOUNT_LOGIN_METHODS = {"email"}
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None  # Disable username field
-ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5  # Optional, for security
 LOGIN_REDIRECT_URL = '/'
 
 # Email settings

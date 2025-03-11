@@ -1,41 +1,206 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-  <h2 class="text-2xl font-bold text-gray-800 mb-6">Sign Up</h2>
-  <form method="post" class="space-y-4">
-    {% csrf_token %}
-    <div>
-      <label for="id_email" class="block text-sm font-medium text-gray-700">Email</label>
-      <input type="email" name="email" id="id_email"
-        class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-        placeholder="you@example.com" required>
+{% include 'partials/navbar.html' %}
+<div class="flex-1 flex flex-col md:flex-row px-6 relative py-24">
+  <!-- Background elements -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-40 -left-20 w-80 h-80 bg-purple-500 rounded-full opacity-10 blur-3xl"></div>
+    <div class="absolute -bottom-10 right-0 w-80 h-80 bg-blue-500 rounded-full opacity-10 blur-3xl"></div>
+  </div>
+
+  <!-- Left side (info) -->
+  <div class="md:w-1/2 flex items-center justify-center py-10 md:py-0">
+    <div class="max-w-md">
+      <h2 class="text-4xl font-bold mb-6 leading-tight">Accelerate your web development workflow</h2>
+      <p class="text-gray-400 mb-8">Join developers who are building modern, interactive websites with minimal
+        JavaScript. This powerful stack combines Django, HTMX, Alpine.js, and Tailwind CSS for a seamless development
+        experience</p>
+      <div class="space-y-4">
+        <div class="flex items-start">
+          <div class="flex-shrink-0 w-10 h-10 bg-indigo-600/20 rounded-lg flex items-center justify-center mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+              class="w-5 h-5 text-indigo-400">
+              <path d="M16.5 6a3 3 0 00-3-3H6a3 3 0 00-3 3v7.5a3 3 0 003 3v-6A4.5 4.5 0 0110.5 6h6z" />
+              <path d="M18 7.5a3 3 0 013 3V18a3 3 0 01-3 3h-7.5a3 3 0 01-3-3v-7.5a3 3 0 013-3H18z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-medium mb-1">HTMX Integration</h3>
+            <p class="text-gray-500 text-sm">Build dynamic interfaces with HTML attributes, no JavaScript required</p>
+          </div>
+        </div>
+
+        <div class="flex items-start">
+          <div class="flex-shrink-0 w-10 h-10 bg-indigo-600/20 rounded-lg flex items-center justify-center mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+              class="w-5 h-5 text-indigo-400">
+              <path fill-rule="evenodd"
+                d="M14.447 3.027a.75.75 0 01.527.92l-4.5 16.5a.75.75 0 01-1.448-.394l4.5-16.5a.75.75 0 01.921-.526zM16.72 6.22a.75.75 0 011.06 0l5.25 5.25a.75.75 0 010 1.06l-5.25 5.25a.75.75 0 11-1.06-1.06L21.44 12l-4.72-4.72a.75.75 0 010-1.06zm-9.44 0a.75.75 0 010 1.06L2.56 12l4.72 4.72a.75.75 0 11-1.06 1.06L.97 12.53a.75.75 0 010-1.06l5.25-5.25a.75.75 0 011.06 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-medium mb-1">Alpine.js Reactivity</h3>
+            <p class="text-gray-500 text-sm">Add lightweight interactivity with a minimal JavaScript framework</p>
+          </div>
+        </div>
+
+        <div class="flex items-start">
+          <div class="flex-shrink-0 w-10 h-10 bg-indigo-600/20 rounded-lg flex items-center justify-center mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+              class="w-5 h-5 text-indigo-400">
+              <path fill-rule="evenodd"
+                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM6.262 6.072a8.25 8.25 0 1010.562-.766 4.5 4.5 0 01-1.318 1.357L14.25 7.5l.165.33a.809.809 0 01-1.086 1.085l-.604-.302a1.125 1.125 0 00-1.298.21l-.132.131c-.439.44-.439 1.152 0 1.591l.296.296c.256.257.622.374.98.314l1.17-.195c.323-.054.654.036.905.245l1.33 1.108c.32.267.46.694.358 1.1a8.7 8.7 0 01-2.288 4.04l-.723.724a1.125 1.125 0 01-1.298.21l-.153-.076a1.125 1.125 0 01-.622-1.006v-1.089c0-.298-.119-.585-.33-.796l-1.347-1.347a1.125 1.125 0 01-.21-1.298L9.75 12l-1.64-1.64a6 6 0 01-1.676-3.257l-.172-1.03z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-medium mb-1">Django Backend</h3>
+            <p class="text-gray-500 text-sm">Leverage the powerful Python framework with built-in admin and
+              authentication</p>
+          </div>
+        </div>
+
+        <div class="flex items-start">
+          <div class="flex-shrink-0 w-10 h-10 bg-indigo-600/20 rounded-lg flex items-center justify-center mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+              class="w-5 h-5 text-indigo-400">
+              <path fill-rule="evenodd"
+                d="M3 6a3 3 0 013-3h12a3 3 0 013 3v12a3 3 0 01-3 3H6a3 3 0 01-3-3V6zm4.5 7.5a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25a.75.75 0 01.75-.75zm3.75-1.5a.75.75 0 00-1.5 0v4.5a.75.75 0 001.5 0V12zm2.25-3a.75.75 0 01.75.75v6.75a.75.75 0 01-1.5 0V9.75A.75.75 0 0113.5 9zm3.75-1.5a.75.75 0 00-1.5 0v9a.75.75 0 001.5 0v-9z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-medium mb-1">Tailwind Styling</h3>
+            <p class="text-gray-500 text-sm">Create beautiful UIs with utility-first CSS that scales with your project
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <label for="id_password1" class="block text-sm font-medium text-gray-700">Password</label>
-      <input type="password" name="password1" id="id_password1"
-        class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+  </div>
+
+  <!-- Right side (form) -->
+  <div class="md:w-1/2 flex items-center justify-center py-10 md:py-0">
+    <div class="bg-[#151923] p-8 rounded-2xl w-full max-w-md relative z-10 overflow-hidden">
+      <!-- Decorative elements -->
+      <div class="absolute -top-20 -right-20 w-40 h-40 bg-indigo-500 rounded-full opacity-20 blur-xl"></div>
+      <div class="absolute -bottom-8 -left-8 w-40 h-40 bg-purple-500 rounded-full opacity-20 blur-xl"></div>
+
+      <div class="relative">
+        <h2 class="text-3xl font-bold mb-2">Create your account</h2>
+        <p class="text-gray-400 mb-8">Start shipping products today</p>
+
+        <form method="POST">
+          {% csrf_token %}
+          <div class="mb-6">
+            <label for="username" class="block text-sm font-medium text-gray-400 mb-2">Full Name</label>
+            <input type="text" id="username"
+              class="w-full bg-[#0e1117] border-0 rounded-md p-4 text-white focus:ring-2 focus:ring-indigo-500 transition-all outline-none"
+              placeholder="John Doe">
+          </div>
+
+          <div class="mb-6">
+            <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
+            <input type="email" name="email" id="id_email"
+              class="w-full bg-[#0e1117] border-0 rounded-md p-4 text-white focus:ring-2 focus:ring-indigo-500 transition-all outline-none"
+              placeholder="you@example.com" required>
+          </div>
+
+          <div class="mb-6">
+            <label for="id_password1" class="block text-sm font-medium text-gray-400 mb-2">Password</label>
+            <input type="password" name="password1" id="id_password1"
+              class="w-full bg-[#0e1117] border-0 rounded-md p-4 text-white focus:ring-2 focus:ring-indigo-500 transition-all outline-none"
+              placeholder="Create a strong password" required>
+            <div class="mt-2 flex">
+              <div class="h-1 w-1/4 bg-gray-700 rounded-full mr-1"></div>
+              <div class="h-1 w-1/4 bg-gray-700 rounded-full mr-1"></div>
+              <div class="h-1 w-1/4 bg-gray-700 rounded-full mr-1"></div>
+              <div class="h-1 w-1/4 bg-gray-700 rounded-full"></div>
+            </div>
+          </div>
+
+
+          <div class="mb-6">
+            <label for="id_password2" class="block text-sm font-medium text-gray-400 mb-2">Confirm Password</label>
+            <input type="password" name="password2" id="id_password2"
+              class="w-full bg-[#0e1117] border-0 rounded-md p-4 text-white focus:ring-2 focus:ring-indigo-500 transition-all outline-none"
+              required>
+          </div>
+
+          <div class="flex items-start mb-6">
+            <div class="flex items-center h-5">
+              <input id="terms" type="checkbox"
+                class="h-4 w-4 rounded border-gray-600 bg-[#0e1117] text-indigo-600 focus:ring-indigo-500">
+            </div>
+            <div class="ml-3 text-sm">
+              <label for="terms" class="text-gray-400">I agree to the <a href="#"
+                  class="text-indigo-400 hover:text-indigo-300">Terms of Service</a> and <a href="#"
+                  class="text-indigo-400 hover:text-indigo-300">Privacy Policy</a></label>
+            </div>
+          </div>
+          {% if form.errors %}
+          <div class="text-red-500 text-sm">
+            {% for field in form %}
+            {% for error in field.errors %}
+            <p>{{ error }}</p>
+            {% endfor %}
+            {% endfor %}
+            {% for error in form.non_field_errors %}
+            <p>{{ error }}</p>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <button type="submit"
+            class="w-full bg-indigo-600 hover:bg-indigo-700 py-4 rounded-md font-medium transition-colors relative group overflow-hidden">
+            <span class="relative z-10">Sign Up</span>
+            <div
+              class="absolute inset-0 h-full w-0 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 ease-out group-hover:w-full">
+            </div>
+          </button>
+        </form>
+
+        <div class="mt-8 text-center">
+          <p class="text-gray-400">
+            Already have an account? <a href="#" class="text-indigo-400 hover:text-indigo-300">Sign in</a>
+          </p>
+        </div>
+
+        <div class="mt-8 pt-8 border-t border-gray-800">
+          <p class="text-center text-sm text-gray-500 mb-4">Or continue with</p>
+          <div class="grid grid-cols-2 gap-4">
+            <button
+              class="flex items-center justify-center px-4 py-3 border border-gray-800 rounded-md hover:bg-[#0e1117]/50 transition-colors">
+              <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 5C13.6168 5 15.1013 5.55353 16.2863 6.47406L19.9235 3.00409C17.8088 1.13964 15.0406 0 12 0C7.3924 0 3.39667 2.59991 1.3858 6.40985L5.43024 9.60278C6.40997 6.91937 8.97754 5 12 5Z"
+                  fill="#EA4335" />
+                <path
+                  d="M23.8961 13.5018C23.9586 13.0102 24 12.5087 24 12C24 11.1422 23.9063 10.3068 23.7352 9.5H12V14.5H18.6048C18.1989 16.0945 17.1949 17.3917 15.8209 18.231L19.7097 21.3576C21.9496 19.2229 23.5235 16.4631 23.8961 13.5018Z"
+                  fill="#4285F4" />
+                <path
+                  d="M5 12C5 11.1566 5.15686 10.3516 5.43024 9.60278L1.3858 6.40985C0.504333 8.08002 0 9.98016 0 12C0 13.9973 0.495056 15.8763 1.35822 17.533L5.40778 14.3359C5.14844 13.6044 5 12.8204 5 12Z"
+                  fill="#FBBC05" />
+                <path
+                  d="M12 19C8.95447 19 6.37042 17.0515 5.40778 14.3359L1.35822 17.533C3.35925 21.3735 7.36981 24 12 24C15.0278 24 17.7888 22.8752 19.7097 21.3576L15.8209 18.231C14.7708 18.7836 13.4253 19 12 19Z"
+                  fill="#34A853" />
+              </svg>
+              Google
+            </button>
+            <button
+              class="flex items-center justify-center px-4 py-3 border border-gray-800 rounded-md hover:bg-[#0e1117]/50 transition-colors">
+              <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M22.1771 0H1.82293C0.81646 0 0 0.816456 0 1.82293V22.1771C0 23.1835 0.81646 24 1.82293 24H12.8097V14.7179H9.6808V11.0837H12.8097V8.41394C12.8097 5.31309 14.7118 3.62526 17.4775 3.62526C18.8008 3.62526 19.9409 3.72361 20.2705 3.76756V7.00792H18.3526C16.8491 7.00792 16.5583 7.72207 16.5583 8.77066V11.0837H20.1456L19.6781 14.7179H16.5583V24H22.1771C23.1835 24 24 23.1835 24 22.1771V1.82293C24 0.816456 23.1835 0 22.1771 0Z"
+                  fill="#1877F2" />
+              </svg>
+              Facebook
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <label for="id_password2" class="block text-sm font-medium text-gray-700">Confirm Password</label>
-      <input type="password" name="password2" id="id_password2"
-        class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
-    </div>
-    {% if form.errors %}
-    <div class="text-red-500 text-sm">
-      {% for field in form %}
-      {% for error in field.errors %}
-      <p>{{ error }}</p>
-      {% endfor %}
-      {% endfor %}
-      {% for error in form.non_field_errors %}
-      <p>{{ error }}</p>
-      {% endfor %}
-    </div>
-    {% endif %}
-    <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700">Sign Up</button>
-  </form>
-  <p class="mt-4 text-center text-gray-600">
-    Already have an account? <a href="{% url 'account_login' %}" class="text-blue-600 hover:underline">Log in</a>
-  </p>
+  </div>
 </div>
 {% endblock %}
