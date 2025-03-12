@@ -93,13 +93,20 @@
 
         <form method="POST">
           {% csrf_token %}
-          <div class="mb-6">
-            <label for="username" class="block text-sm font-medium text-gray-400 mb-2">Full Name</label>
-            <input type="text" id="username"
-              class="w-full bg-[#0e1117] border-0 rounded-md p-4 text-white focus:ring-2 focus:ring-indigo-500 transition-all outline-none"
-              placeholder="John Doe">
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div>
+              <label for="id_first_name" class="block text-sm font-medium text-gray-400 mb-2">First Name</label>
+              <input type="text" id="id_first_name" name="first_name"
+                class="w-full bg-[#0e1117] border-0 rounded-md p-4 text-white focus:ring-2 focus:ring-indigo-500 transition-all outline-none"
+                placeholder="John">
+            </div>
+            <div>
+              <label for="id_last_name" class="block text-sm font-medium text-gray-400 mb-2">Last Name</label>
+              <input type="text" id="id_last_name" name="last_name"
+                class="w-full bg-[#0e1117] border-0 rounded-md p-4 text-white focus:ring-2 focus:ring-indigo-500 transition-all outline-none"
+                placeholder="Doe">
+            </div>
           </div>
-
           <div class="mb-6">
             <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
             <input type="email" name="email" id="id_email"
@@ -153,7 +160,7 @@
           {% endif %}
 
           <button type="submit"
-            class="w-full bg-indigo-600 hover:bg-indigo-700 py-4 rounded-md font-medium transition-colors relative group overflow-hidden">
+            class="w-full cursor-pointer bg-indigo-600 hover:bg-indigo-700 py-4 rounded-md font-medium transition-colors relative group overflow-hidden">
             <span class="relative z-10">Sign Up</span>
             <div
               class="absolute inset-0 h-full w-0 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 ease-out group-hover:w-full">
