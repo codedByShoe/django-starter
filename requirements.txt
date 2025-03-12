@@ -1,5 +1,6 @@
 asgiref==3.8.1
 Django==5.1.7
 django-allauth==65.4.1
+django-cotton==2.0.0
 django-unfold==0.51.0
 sqlparse==0.5.3
