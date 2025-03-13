@@ -1,24 +1,26 @@
 <c-layouts.guest>
-  <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-    <h2 class="text-2xl font-bold text-gray-800 mb-6">Your Profile</h2>
+  <div class="max-w-7xl mx-auto  p-6 rounded-lg shadow-md py-12">
+    <h2 class="text-2xl font-bold text-on-surface dark:text-on-surface-dark mb-6">Your Profile</h2>
 
-    <h3 class="text-lg font-semibold text-gray-700 mb-2">Update Personal Info</h3>
-    <form method="post" class="space-y-4 mb-6">
-      {% csrf_token %}
-      <div>
-        <label for="id_first_name" class="block text-sm font-medium text-gray-700">First Name</label>
-        {{ name_form.first_name }}
-      </div>
-      <div>
-        <label for="id_last_name" class="block text-sm font-medium text-gray-700">Last Name</label>
-        {{ name_form.last_name }}
-      </div>
-      {% if name_form.errors %}
-      <div class="text-red-500 text-sm">{{ name_form.errors }}</div>
-      {% endif %}
-      <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700">Update Name</button>
-    </form>
-    <h3 class="text-lg font-semibold text-gray-700 mb-2">Update Email</h3>
+    <c-card>
+      <h3 class="text-lg font-semibold text-on-surface-strong dark:text-on-surface-dark-strong mb-2">Update Personal
+        Info</h3>
+      <form method="post" class="space-y-4">
+        {% csrf_token %}
+        <div>
+          <c-input id="id_first_name" name="first_name" placeholder="Old Data" label="First Name" type="text"
+            :errors="name_form.first_name.errors" />
+        </div>
+        <div>
+          <c-input id="id_last_name" name="last_name" placeholder="Old Data" label="Last Name" type="text"
+            :errors="name_form.last_name.errors" />
+        </div>
+        <button type="submit"
+          class="whitespace-nowrap rounded-radius bg-secondary border border-secondary px-4 py-2 text-sm font-medium tracking-wide text-on-secondary transition hover:opacity-75 text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary active:opacity-100 active:outline-offset-0 disabled:opacity-75 disabled:cursor-not-allowed dark:bg-secondary-dark dark:border-secondary-dark dark:text-on-secondary-dark dark:focus-visible:outline-secondary-dark">Update
+          Name</button>
+      </form>
+    </c-card>
+    <h3 class="text-lg font-semibold text-on-surface dark:text-on-surface-dark mb-2">Update Email</h3>
     <form method="post" class="space-y-4 mb-6">
       {% csrf_token %}
       <div>
@@ -31,7 +33,7 @@
       <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700">Update Email</button>
     </form>
 
-    <h3 class="text-lg font-semibold text-gray-700 mb-2">Change Password</h3>
+    <h3 class="text-lg font-semibold text-on-surface dark:text-on-surface-dark mb-2">Change Password</h3>
     <form method="post" class="space-y-4">
       {% csrf_token %}
       <div>

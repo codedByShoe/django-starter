@@ -4,6 +4,9 @@
     "build": "bun build ./static/js/site.js --outfile ./static/js/bundle.js --minify"
   },
   "dependencies": {
+    "@alpinejs/collapse": "^3.14.9",
+    "@alpinejs/focus": "^3.14.9",
+    "@alpinejs/mask": "^3.14.9",
     "@tailwindcss/cli": "^4.0.12",
     "alpinejs": "^3.14.8",
     "htmx.org": "2.0.4",

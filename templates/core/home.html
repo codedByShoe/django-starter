@@ -1,114 +1,72 @@
 <c-layouts.guest>
-  <div class="w-full px-3 antialiased lg:px-6">
-    <div class="mx-auto max-w-7xl">
-      <c-guest-nav />
-      <div class="container px-6 py-16 mx-auto md:text-center md:px-4">
-        <h1 class="text-4xl font-extrabold leading-none tracking-tight text-white sm:text-5xl md:text-6xl xl:text-7xl">
-          <span class="block">Simplify the way you</span>
-          <span class="relative inline-block mt-3 text-white">build</span>
-        </h1>
-        <p
-          class="mx-auto mt-6 text-sm text-gray-200 md:text-center md:mt-8 sm:text-base md:max-w-xl md:text-lg xl:text-xl">
-          A modern starter kit that combines Django with Alpine.js, HTMX, and Tailwind CSS to help you build interactive
-          websites with minimal JavaScript.
-        </p>
 
-        <div class="relative mx-auto mt-12 max-w-4xl">
-          <svg class="absolute blur-3xl opacity-70 right-52 -top-64" width="80%" height="80%" viewBox="0 0 400 400"
-            fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_17_56)">
-              <g filter="url(#filter0_f_17_56)">
-                <path d="M128.6 0H0V322.2L250.5 231.5L128.6 0Z" fill="white"></path>
-                <path d="M0 322.2V400H240H320L250.5 231.5L0 322.2Z" fill="#7000FF"></path>
-                <path d="M320 400H400V78.75L250.5 231.5L320 400Z" fill="#5200FF"></path>
-                <path d="M400 0H128.6L250.5 231.5L400 78.75V0Z" fill="#380094"></path>
-              </g>
-            </g>
-            <defs>
-              <filter id="filter0_f_17_56" x="-160.333" y="-160.333" width="720.666" height="720.666"
-                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
-                <feGaussianBlur stdDeviation="80.1666" result="effect1_foregroundBlur_17_56"></feGaussianBlur>
-              </filter>
-            </defs>
-          </svg>
-
-
-          <div
-            class="relative lg:border lg:p-20 lg:rounded-[3rem] lg:bg-[#141521]/50 border-white/10 lg:backdrop-blur-xl lg:shadow-2xl">
-            <div class="relative z-10">
-              <h2 class="text-2xl font-bold mb-4">Experience the power of modern web tools</h2>
-              <p class="text-gray-300 mb-6">Build reactive UIs without the headache. Powered by the perfect combination
-                of
-                backend and frontend technologies.</p>
-
-              <div class="flex flex-wrap gap-3 justify-center">
-                <a href="#_"
-                  class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-indigo-600 to-purple-600 rounded-md hover:from-indigo-500 hover:to-purple-500 transition-all duration-300 shadow-lg">
-                  Get Started
-                </a>
-                <a href="https://www.github.com/codedbyshoe/django-starter" target="_blank"
-                  class="inline-flex items-center gap-x-1.5 justify-center px-6 py-3 text-base font-medium text-indigo-300 border border-indigo-600/30 rounded-md hover:bg-indigo-600/10 hover:border-indigo-300/50 transition-all duration-300">
-                  <svg class="-ml-0.5 size-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 128 128">
-                    <g>
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z" />
-                      <path
-                        d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0" />
-                    </g>
-                  </svg>
-                  View on github
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div class="text-center text-on-surface-strong dark:text-on-surface-dark-strong py-12">
+    <div class="relative w-64 h-64 mx-auto mb-8">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-gray-800 via-indigo-900 to-purple-900 rounded-full opacity-80 blur-xl">
+      </div>
+      <!-- Stars -->
+      <div class="absolute inset-0">
+        <div class="w-1 h-1 bg-white rounded-full absolute top-10 left-20 opacity-70"></div>
+        <div class="w-1 h-1 bg-white rounded-full absolute top-40 left-60 opacity-70"></div>
+        <div class="w-1 h-1 bg-white rounded-full absolute top-60 right-20 opacity-70"></div>
       </div>
 
-      <!-- Technology Partners -->
-      <div class="text-center mt-12 mx-auto px-6 pb-12">
-        <p class="text-slate-400 text-sm tracking-tight uppercase opacity-60 mb-8">Built with modern technologies you
-          already know and love:</p>
-        <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
-          <!-- Django Logo -->
-          <div class="text-gray-400 hover:text-gray-300 transition-colors">
-            <svg version="1.0" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-              class="h-14">
-              <path
-                d="M59.448 0h20.93v96.88c-10.737 2.04-18.62 2.855-27.181 2.855-25.551-.001-38.87-11.551-38.87-33.705 0-21.338 14.135-35.2 36.015-35.2 3.398 0 5.98.272 9.106 1.087zm0 48.765c-2.446-.815-4.485-1.086-7.067-1.086-10.6 0-16.717 6.523-16.717 17.939 0 11.145 5.845 17.26 16.582 17.26 2.309 0 4.212-.136 7.202-.542z" />
-              <path
-                d="M113.672 32.321V80.84c0 16.717-1.224 24.735-4.893 31.666-3.398 6.661-7.883 10.873-17.124 15.494l-19.435-9.241c9.242-4.35 13.726-8.153 16.58-14 2.99-5.979 3.943-12.91 3.943-31.122V32.321zM92.742.111h20.93v21.474h-20.93z" />
-            </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor"
+        class="relative w-full h-full">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+      </svg>
+    </div>
 
-          </div>
-          <!-- Alpine.js Logo -->
-          <div class="text-gray-400 hover:text-gray-300 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-14" viewBox="0 0 128 128">
-              <path fill="#77c1d2" fill-rule="evenodd" d="M98.444 35.562 126 62.997 98.444 90.432 70.889 62.997z"
-                clip-rule="evenodd" />
-              <path fill="#2d3441" fill-rule="evenodd" d="m29.556 35.562 57.126 56.876H31.571L2 62.997z"
-                clip-rule="evenodd" />
-            </svg>
+    <h1 class="text-5xl md:text-6xl font-bold mb-4">
+      Simplify the way you build
+    </h1>
 
-          </div>
-          <!-- HTMX Logo -->
-          <div class="text-gray-400 hover:text-gray-300 transition-colors">
-            <span class="font-semibold text-2xl">
-              &lt;<b class="text-[#3D72D7]">/</b>&gt; htm<b class="text-[#3D72D7]">x</b>
-            </span>
-          </div>
-          <!-- Tailwind CSS Logo -->
-          <div class="text-gray-400 hover:text-gray-300 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="currentColor" class="h-12">
-              <path
-                d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
-                fill="#38bdf8" />
-            </svg>
+    <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
+      A modern starter kit that combines Django with Alpine.js, HTMX, and Tailwind CSS to help you ship fast without the
+      headache
+    </p>
+  </div>
+  <div class="text-center mt-12 mx-auto px-6 pb-12">
+    <p class="text-on-surface dark:text-on-surface-dark text-sm tracking-tight uppercase opacity-60 mb-8">Built with
+      modern technologies you
+      already know and love:</p>
+    <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+      <!-- Django Logo -->
+      <div class="text-on-surface-strong dark:text-on-surface-dark-strong">
+        <svg version="1.0" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-14">
+          <path
+            d="M59.448 0h20.93v96.88c-10.737 2.04-18.62 2.855-27.181 2.855-25.551-.001-38.87-11.551-38.87-33.705 0-21.338 14.135-35.2 36.015-35.2 3.398 0 5.98.272 9.106 1.087zm0 48.765c-2.446-.815-4.485-1.086-7.067-1.086-10.6 0-16.717 6.523-16.717 17.939 0 11.145 5.845 17.26 16.582 17.26 2.309 0 4.212-.136 7.202-.542z" />
+          <path
+            d="M113.672 32.321V80.84c0 16.717-1.224 24.735-4.893 31.666-3.398 6.661-7.883 10.873-17.124 15.494l-19.435-9.241c9.242-4.35 13.726-8.153 16.58-14 2.99-5.979 3.943-12.91 3.943-31.122V32.321zM92.742.111h20.93v21.474h-20.93z" />
+        </svg>
 
-          </div>
-        </div>
+      </div>
+      <!-- Alpine.js Logo -->
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-14" viewBox="0 0 128 128">
+          <path fill="#77c1d2" fill-rule="evenodd" d="M98.444 35.562 126 62.997 98.444 90.432 70.889 62.997z"
+            clip-rule="evenodd" />
+          <path fill="#2d3441" fill-rule="evenodd" d="m29.556 35.562 57.126 56.876H31.571L2 62.997z"
+            clip-rule="evenodd" />
+        </svg>
+
+      </div>
+      <!-- HTMX Logo -->
+      <div class="text-on-surface-strong dark:text-on-surface-dark-strong ">
+        <span class="font-semibold text-2xl">
+          &lt;<b class="text-[#3D72D7]">/</b>&gt; htm<b class="text-[#3D72D7]">x</b>
+        </span>
+      </div>
+      <!-- Tailwind CSS Logo -->
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="currentColor" class="h-12">
+          <path
+            d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
+            fill="#38bdf8" />
+        </svg>
+
       </div>
     </div>
   </div>

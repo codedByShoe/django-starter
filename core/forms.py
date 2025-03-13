@@ -8,13 +8,7 @@ class UpdateEmailForm(forms.ModelForm):
     class Meta:
         model = get_user_model()
         fields = ["email"]
-        widgets = {
-            "email": forms.EmailInput(
-                attrs={
-                    "class": "mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                }
-            )
-        }
+        widgets = {"email": forms.EmailInput()}
 
 
 class UpdateNameForm(forms.ModelForm):

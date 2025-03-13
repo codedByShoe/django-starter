@@ -1,17 +1,16 @@
-{% extends 'base.html' %}
-{% block content %}
-<div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-  <h2 class="text-2xl font-bold text-gray-800 mb-6">Verification Email Sent</h2>
-  <p class="text-gray-600 mb-4">
-    We’ve sent a verification email to <span class="font-semibold">{{ email }}</span>.
-    Please check your inbox (and spam folder) and click the link to confirm your email address.
-  </p>
-  <p class="text-gray-600 mb-4">
-    Once verified, you can log in and start using Launchpad!
-  </p>
-  <a href="{% url 'account_login' %}"
-    class="inline-block w-full bg-blue-600 text-white p-2 rounded-md text-center hover:bg-blue-700">
-    Back to Login
-  </a>
-</div>
-{% endblock %}
+<c-layouts.guest>
+  <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">Verification Email Sent</h2>
+    <p class="text-gray-600 mb-4">
+      We’ve sent a verification email to <span class="font-semibold">{{ email }}</span>.
+      Please check your inbox (and spam folder) and click the link to confirm your email address.
+    </p>
+    <p class="text-gray-600 mb-4">
+      Once verified, you can log in and start using Launchpad!
+    </p>
+    <a href="{% url 'account_login' %}"
+      class="inline-block w-full bg-blue-600 text-white p-2 rounded-md text-center hover:bg-blue-700">
+      Back to Login
+    </a>
+  </div>
+</c-layouts.guest>
